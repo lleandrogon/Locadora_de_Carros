@@ -6,6 +6,15 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import Vuex from 'vuex';
+
+Vuex.use(Vuex)
+
+const store = new Vuex.Store({
+    state: {
+        teste: 'Teste de recuperação de valor da Store do Vuex'
+    }
+})
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -24,6 +33,7 @@ import TableComponent from './components/Table.vue';
 import CardComponent from './components/Card.vue';
 import ModalComponent from './components/Modal.vue';
 import AlertComponent from './components/Alert.vue';
+import PaginateComponent from './components/Paginate.vue';
 app.component('example-component', ExampleComponent);
 app.component('login-component', LoginComponent);
 app.component('home-component', HomeComponent);
@@ -33,6 +43,7 @@ app.component('table-component', TableComponent);
 app.component('card-component', CardComponent);
 app.component('modal-component', ModalComponent);
 app.component('alert-component', AlertComponent);
+app.component('paginate-component', PaginateComponent);
 
 /**
  * The following block of code may be used to automatically register your
